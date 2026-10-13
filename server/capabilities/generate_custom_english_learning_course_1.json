@@ -1,0 +1,41 @@
+{
+  "id": "generate_custom_english_learning_course_1",
+  "pluginKey": "@official-plugins/ai-text-generate",
+  "pluginVersion": "1.0.18",
+  "name": "生成定制化英语学习课程内容",
+  "description": "根据用户输入的主题、学习目标和水平，生成包含单词、句子、对话、语法点的定制化英语学习课程内容，用于AI创作坊模块",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "level": {
+        "type": "string",
+        "description": "学习者的英语水平，例如入门、中级、高级等"
+      },
+      "topic": {
+        "type": "string",
+        "description": "英语学习课程的主题"
+      },
+      "learning_objective": {
+        "description": "本次学习的目标，例如掌握日常交流用语、备考雅思等",
+        "type": "string"
+      }
+    },
+    "required": [
+      "topic",
+      "learning_objective",
+      "level"
+    ]
+  },
+  "formValue": {
+    "modelParams": {
+      "temperature": 0.5,
+      "maxTokens": 8192
+    },
+    "prompt": "你是一位专业的英语教学专家，拥有丰富的英语课程设计经验，擅长根据不同水平的学习者需求定制个性化的学习内容。\n\n请根据以下信息生成一份定制化的英语学习课程内容：\n- 学习主题：{{input.topic}}\n- 学习目标：{{input.learning_objective}}\n- 学习者水平：{{input.level}}\n\n输出必须严格匹配以下AICourseContent JSON结构，不得包含任何额外解释文字：\n{\n  \"words\": [\n    {\n      \"word\": \"string\",\n      \"meaning\": \"string\",\n      \"example\": \"string\"\n    }\n  ],\n  \"sentences\": [\n    {\n      \"sentence\": \"string\",\n      \"translation\": \"string\",\n      \"components\": [\n        {\n          \"id\": \"string\",\n          \"text\": \"string\",\n          \"type\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"dialogues\": [\n    {\n      \"speaker\": \"string\",\n      \"text\": \"string\",\n      \"translation\": \"string\"\n    }\n  ],\n  \"grammar\": [\n    {\n      \"point\": \"string\",\n      \"explanation\": \"string\",\n      \"example\": \"string\"\n    }\n  ]\n}\n\n内容要求：\n1. words数组必须包含10个单词，每个单词包含word（英文单词）、meaning（中文释义）、example（例句）三个字段\n2. sentences数组必须包含5个句子，每个句子包含sentence（英文句子）、translation（中文翻译）、components（语法成分拆解数组）三个字段，components数组中的每个元素包含id（唯一标识）、text（成分文本）、type（成分类型，如主语、谓语、宾语等）三个字段\n3. dialogues数组必须包含2组对话，每组对话包含speaker（说话人）、text（英文内容）、translation（中文翻译）三个字段\n4. grammar数组必须包含3个语法点，每个语法点包含point（语法点名称）、explanation（语法说明）、example（例句）三个字段\n5. 内容难度严格匹配学习者的水平，所有内容紧密围绕给定主题，符合学习目标\n6. 输出必须是严格有效的JSON格式，可直接被JSON解析器解析，不得包含任何markdown格式、注释或额外说明文字",
+    "modelID": "2015"
+  },
+  "createdAt": 1787630038544,
+  "updatedAt": 1787630072174,
+  "createdBy": 7593756845689277664
+}

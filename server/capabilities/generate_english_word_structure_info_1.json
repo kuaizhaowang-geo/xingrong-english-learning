@@ -1,0 +1,63 @@
+{
+  "id": "generate_english_word_structure_info_1",
+  "pluginKey": "@official-plugins/ai-text-to-json",
+  "pluginVersion": "1.0.26",
+  "name": "英文单词结构化信息生成",
+  "description": "根据输入的英文单词，生成包含音标、词性、释义、例句、近义词、反义词等的结构化单词学习信息，返回JSON格式",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "english_word": {
+        "description": "需要查询的英文单词",
+        "type": "string"
+      }
+    },
+    "required": [
+      "english_word"
+    ]
+  },
+  "formValue": {
+    "jsonStructure": [
+      {
+        "name": "word",
+        "paramDescription": "英文单词本身",
+        "paramType": "String"
+      },
+      {
+        "paramDescription": "音标信息，schema: {uk: string(英式音标), us: string(美式音标)}",
+        "paramType": "Object",
+        "name": "phonetic"
+      },
+      {
+        "name": "meanings",
+        "paramDescription": "词义列表，items schema: {partOfSpeech: string(词性，如n./v./adj./adv.等), definitions: array(释义列表，每个释义为字符串)}",
+        "paramType": "Array"
+      },
+      {
+        "paramType": "Array",
+        "name": "examples",
+        "paramDescription": "例句列表，items schema: {sentence: string(英文例句), translation: string(中文翻译)}"
+      },
+      {
+        "name": "synonyms",
+        "paramDescription": "近义词列表，每个元素为英文单词字符串",
+        "paramType": "Array"
+      },
+      {
+        "name": "antonyms",
+        "paramDescription": "反义词列表，每个元素为英文单词字符串",
+        "paramType": "Array"
+      }
+    ],
+    "modelID": "2015",
+    "modelParams": {
+      "maxTokens": 8192,
+      "temperature": 0.5
+    },
+    "prompt": "你是一位专业的英语词典编辑，擅长提供准确、实用的单词学习信息。\n\n请根据以下英文单词生成结构化的学习信息：\n单词：{{input.english_word}}\n\n要求：\n1. 音标需包含英式和美式发音\n2. 词性按常用程度排序，每个词性对应最常用的2-3个释义\n3. 例句需简单实用，符合日常使用场景\n4. 近义词和反义词需与单词的常用含义匹配\n5. 所有信息需准确无误，若某些信息不存在则填空字符串"
+  },
+  "createdAt": 1788349062208,
+  "updatedAt": 1788349062208,
+  "createdBy": 7593756845689277664
+}

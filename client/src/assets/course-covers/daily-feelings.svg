@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64B5F6"/>
+      <stop offset="100%" stop-color="#4361EE"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg)"/>
+  <rect width="400" height="240" fill="url(#glow)"/>
+  <g opacity="0.9">
+    <g transform="translate(260,55)">
+      <circle cx="18" cy="22" r="14" fill="white" opacity="0.3"/>
+      <circle cx="13" cy="20" r="1.5" fill="white"/>
+      <circle cx="23" cy="20" r="1.5" fill="white"/>
+      <path d="M12 27 Q18 32 24 27" stroke="white" stroke-width="1.5" fill="none"/>
+    </g>
+    <g transform="translate(300,60)">
+      <circle cx="18" cy="20" r="14" fill="white" opacity="0.2"/>
+      <path d="M12 17 L16 21 M16 17 L12 21" stroke="white" stroke-width="1.5" fill="none"/>
+      <path d="M20 17 L24 21 M24 17 L20 21" stroke="white" stroke-width="1.5" fill="none"/>
+      <path d="M12 27 Q18 24 24 27" stroke="white" stroke-width="1.5" fill="none"/>
+    </g>
+    <g transform="translate(320,100)">
+      <circle cx="12" cy="12" r="10" fill="white" opacity="0.25"/>
+      <circle cx="8" cy="10" r="1" fill="white"/>
+      <circle cx="16" cy="10" r="1" fill="white"/>
+      <ellipse cx="12" cy="16" rx="3" ry="2" fill="white" opacity="0.6"/>
+    </g>
+  </g>
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <text x="28" y="178" fill="white" font-size="20" font-weight="700">日常口语·感受与情绪</text>
+    <text x="28" y="202" fill="white" font-size="13" opacity="0.85">Feelings & Emotions</text>
+  </g>
+  <line x1="28" y1="218" x2="80" y2="218" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+</svg>

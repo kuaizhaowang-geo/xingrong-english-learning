@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#81C784"/>
+      <stop offset="100%" stop-color="#2EC4B6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg)"/>
+  <rect width="400" height="240" fill="url(#glow)"/>
+  <!-- 装饰图形 -->
+  <g opacity="0.9">
+    <g transform="translate(275,55)"><rect x="5" y="5" width="55" height="50" rx="3" fill="white" opacity="0.2"/><rect x="15" y="15" width="35" height="3" rx="1.5" fill="white" opacity="0.7"/><rect x="15" y="23" width="32" height="2" rx="1" fill="white" opacity="0.5"/><rect x="15" y="30" width="28" height="2" rx="1" fill="white" opacity="0.5"/><rect x="15" y="37" width="38" height="2" rx="1" fill="white" opacity="0.5"/><rect x="15" y="44" width="22" height="2" rx="1" fill="white" opacity="0.3"/><text x="48" y="52" fill="white" font-size="10" opacity="0.6">Book 3</text></g>
+  </g>
+  <!-- 标题文字 -->
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <text x="28" y="178" fill="white" font-size="20" font-weight="700">新概念英语第三册</text>
+    <text x="28" y="202" fill="white" font-size="13" opacity="0.85">培养技能</text>
+  </g>
+  <!-- 底部装饰线 -->
+  <line x1="28" y1="218" x2="80" y2="218" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+</svg>

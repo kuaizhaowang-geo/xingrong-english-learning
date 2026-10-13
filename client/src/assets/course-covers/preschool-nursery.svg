@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FFA726"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg)"/>
+  <rect width="400" height="240" fill="url(#glow)"/>
+  <!-- 装饰图形 -->
+  <g opacity="0.9">
+    <g transform="translate(285,55)"><path d="M25 10 Q30 5 35 10 L35 35 Q35 45 25 45 Q15 45 15 35 L15 38" stroke="white" stroke-width="2.5" fill="none"/><ellipse cx="18" cy="42" rx="6" ry="3" fill="white" opacity="0.4"/><path d="M35 20 L50 15 L50 30 L35 30" fill="white" opacity="0.3"/></g>
+  </g>
+  <!-- 标题文字 -->
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <text x="28" y="178" fill="white" font-size="20" font-weight="700">英文儿歌童谣课</text>
+    <text x="28" y="202" fill="white" font-size="13" opacity="0.85">唱着学英语越唱越开心</text>
+  </g>
+  <!-- 底部装饰线 -->
+  <line x1="28" y1="218" x2="80" y2="218" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+</svg>

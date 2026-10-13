@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64B5F6"/>
+      <stop offset="100%" stop-color="#4361EE"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg)"/>
+  <rect width="400" height="240" fill="url(#glow)"/>
+  <!-- 装饰图形 -->
+  <g opacity="0.9">
+    <g transform="translate(290,55)"><circle cx="25" cy="25" r="22" fill="white" opacity="0.25"/><path d="M18 18 Q18 10 25 10 Q32 10 32 16 Q32 22 25 26 Q25 28 25 30" stroke="white" stroke-width="2.5" fill="none"/><circle cx="25" cy="36" r="2.5" fill="white"/></g>
+  </g>
+  <!-- 标题文字 -->
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <text x="28" y="178" fill="white" font-size="20" font-weight="700">日常口语·疑问与咨询</text>
+    <text x="28" y="202" fill="white" font-size="13" opacity="0.85">Questions & Inquiries</text>
+  </g>
+  <!-- 底部装饰线 -->
+  <line x1="28" y1="218" x2="80" y2="218" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+</svg>

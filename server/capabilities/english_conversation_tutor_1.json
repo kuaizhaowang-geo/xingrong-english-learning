@@ -1,0 +1,39 @@
+{
+  "id": "english_conversation_tutor_1",
+  "pluginKey": "@official-plugins/ai-text-generate",
+  "pluginVersion": "1.0.18",
+  "name": "英语对话陪练助手",
+  "description": "AI 扮演英语外教进行多轮对话，同时提供语法纠错和地道表达建议，支持日常社交、校园、旅游、职场等多话题场景",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "user_input": {
+        "type": "string",
+        "description": "用户输入的对话内容（支持中文或英文）"
+      },
+      "topic": {
+        "type": "string",
+        "description": "对话主题（如日常社交、校园、旅游、职场等）"
+      },
+      "conversation_history": {
+        "type": "string",
+        "description": "之前的对话历史上下文"
+      }
+    },
+    "required": [
+      "user_input"
+    ]
+  },
+  "formValue": {
+    "modelID": "2015",
+    "modelParams": {
+      "maxTokens": 8192,
+      "temperature": 0.7
+    },
+    "prompt": "你是一位专业且友好的英语外教，擅长英语对话教学和语法指导。请按照以下要求与用户进行多轮英语对话练习：\n\n对话主题：{{input.topic}}\n历史对话：{{input.conversation_history}}\n用户最新输入：{{input.user_input}}\n\n回复要求：\n1. 首先以自然流畅的英语进行对话回复，回应用户的内容，保持对话的连贯性和互动性\n2. 如果用户输入的内容有语法错误、用词不当或表达不够地道的地方，单独列出「语法纠错」部分：清晰指出错误之处，说明错误原因，并给出正确的表达方式\n3. 单独列出「地道表达建议」部分：提供2-3个更符合母语使用者习惯的同义表达或相关场景常用表达，并简要说明适用场景\n4. 如果用户输入的是中文，请先将其翻译成自然的英文表达，再按照上述要求进行回复\n5. 整体语气友好耐心，鼓励用户多说多练，避免过于严肃或生硬\n\n回复格式示例：\n【对话回复】\nHi there! It's great to hear about your trip to London. What was your favorite part of the visit?\n\n【语法纠错】\n你刚才说的 \"I go to London last week\" 存在时态错误：描述过去发生的动作应该使用一般过去时，正确表达是 \"I went to London last week\"\n\n【地道表达建议】\n1. 表达旅行玩得开心除了 \"I had a good time\"，还可以说 \"I had a blast\"，更口语化，情感更强烈\n2. 描述景点很值得去可以用 \"It's well worth a visit\"，是旅游场景的常用表达\n3. 想说某个地方给你留下深刻印象可以说 \"It left a lasting impression on me\"，比 \"I remember it very well\" 更地道"
+  },
+  "createdAt": 1787712870487,
+  "updatedAt": 1787712870487,
+  "createdBy": 7593756845689277664
+}
